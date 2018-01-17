@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/quanbu"
+        android:title="全部"
+        />
+    <item
+        android:id="@+id/daizhifu"
+        android:title="待支付" />
+
+    <item
+        android:id="@+id/yizhifu"
+        android:title="已支付" />
+
+    <item
+        android:id="@+id/yiquxiao"
+        android:title="已取消" />
+
+</menu>

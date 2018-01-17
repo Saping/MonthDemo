@@ -1,0 +1,51 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    defaultConfig {
+        applicationId "com.example.administrator.a1511amonthdemo01"
+        minSdkVersion 15
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.1'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+
+//ok
+    compile 'com.squareup.okhttp3:okhttp:3.6.0'
+    compile 'com.squareup.okio:okio:1.11.0'
+    compile 'com.github.bumptech.glide:glide:3.6.1'
+    compile 'com.google.code.gson:gson:2.6.2'
+
+    //tablayout
+    compile 'com.android.support:design:26.1.0'
+    //刷新
+    compile 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.4-7'
+    compile 'com.scwang.smartrefresh:SmartRefreshHeader:1.0.4-7'//没有使用特殊Header，可以不加这行
+
+    compile 'com.android.support:appcompat-v7:26.1.0'//版本随意（必须）
+//    compile 'com.android.support:design:25.3.1'//版本随意（非必须，引用可以解决无法预览问题）
+
+//1.0.4 出现问题可以回退到 1.0.3
+    compile 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.3'
+    compile 'com.scwang.smartrefresh:SmartRefreshHeader:1.0.3'//没有使用特殊Header，可以不加这行
+//recyclerView
+    compile 'com.android.support:recyclerview-v7:26.1.0'
+
+    compile 'pl.droidsonroids.gif:android-gif-drawable:1.2.3'//一个开源gif控件
+}
